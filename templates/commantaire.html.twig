@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SecuriryController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    {{form_start(form)}}
+    {{form_row(form.content,{'attr':{'placeholder':"Content of the Article",'row':'12','cols':'100'}})}}
+    {{form_end(form)}}
+</div>
+{% endblock %}

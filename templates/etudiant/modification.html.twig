@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabeh{% endblock %}
+
+{% block body %}
+    <h1>
+        Modification<br><br>
+        <hr></h1>
+    {{form_start(f)}}
+    {{form_widget(f)}}
+    {{form_end(f)}}
+
+{% endblock %}

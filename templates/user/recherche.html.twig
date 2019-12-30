@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabeh{% endblock %}
+
+{% block body %}
+<h1>
+    Résultat De Votre Recherche<br><br> 
+    <hr>
+    {% for User in User %}
+        {{User.id}}<br>
+        {{User.email}}<br>
+        {{User.username}}<br>
+        {{User.password}}<br>
+        {{User.roles()}}<br>
+        <hr>
+    {% endfor %}
+ </h1>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabeh{% endblock %}
+
+{% block body %}
+<a href="{{path('ajoute')}}"><h2>Ajout User </h2></a>
+<hr><br>
+<form action="{{path('recherche')}}">
+@Email :
+    <input type="text" name="email" required="required">  
+        <button type="submit" class="btn btn-primary">Recherche</button> 
+</form>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th></th>
+            <th scope="col">email</th>
+            <th scope="col">username</th>
+            <th scope="col">password</th>
+            <th scope="col">roles</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in liste %}
+        <tr>
+            <th>{{user.id}}</th>
+            <th>{{user.email}}</th>
+            <th>{{user.username}}</th>
+            <th>{{user.password}}</th>
+            <th></th>
+            <th> 
+                <a href="{{path('detail',{'id':user.id})}}">
+                <button type="button" class="btn btn-primary">plus de détails</button>
+                </a>
+                <a href="{{path('modification',{'id':user.id})}}">
+                <button type="button" class="btn btn-warning">Modification</button>
+                </a>
+                <a href="{{path('supprimer',{'id' :user.id})}}">
+                <button type="button" class="btn btn-danger">Supprimer</button>
+                </a>
+            </th>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

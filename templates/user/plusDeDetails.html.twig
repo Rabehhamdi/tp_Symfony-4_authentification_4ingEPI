@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabeh{% endblock %}
+
+{% block body %} 
+<h1>
+plus de détais<br><br>
+<a href="{{path('affiche')}}">
+    <button type="button" class="btn btn-primary">Liste </button>
+</a><hr>
+{{User.id}}<br>
+{{User.email}}<br>
+{{User.username}}<br>
+{{User.password}}<br>
+{{User.getRoles()}}<br></h1>
+{% endblock %}

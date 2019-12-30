@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rabeh{% endblock %}
+
+{% block body %}
+    <h1>
+        Résultat De Votre Recherche<br><br>
+        <hr>
+        {% for etudiant in etudiant %}
+            id    :{{etudiant.id}}<br>
+            NOM   :{{etudiant.nom}}<br>
+            EMAIL :{{etudiant.email}}<br>
+            CLASS : {{etudiant.class}}<br><br>
+            <hr>
+        {% endfor %}
+    </h1>
+{% endblock %}
